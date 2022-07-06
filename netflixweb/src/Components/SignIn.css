@@ -1,0 +1,79 @@
+
+.login_page{
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/271ac55e-7228-438e-824e-92db37981e59/993003ba-1a9f-4b48-854f-4959e42116f3/IN-en-20220627-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+    width: 100%;
+    height: 630px;
+    padding-top: 1rem;
+    color: whitesmoke;
+    display: flex;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(59, 26, 26);
+    border-radius: 6px;
+    width: 15rem;
+    margin-left: 22rem;
+    background-color: transparent;
+    background-color: rgba(0,0,0,.75);
+    padding-bottom: -2rem;
+
+}
+
+.email{
+    padding: 1rem;
+    padding-bottom: 1rem;
+    
+}
+#email{
+
+    border-radius: 25px;
+    height: 29px;
+    width: 245px;
+    background-color: #002f34;
+    color: whitesmoke;
+
+}
+
+#email:hover{
+    background-color: white;
+    color: #002f34;
+    border: 2px solid #002f34;
+}
+
+.password{
+
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn_login{
+    background-color: white;
+    color: #002f34;
+    border: 2px solid #002f34;
+    border-radius: 25px;
+    
+}
+.btn{
+    height: 78px;
+    width: 245px;
+    
+
+}
+.btn_login:hover{
+   
+    background-color: #002f34;
+    color: whitesmoke;
+
+}
+
+.exit{
+    padding-top: .1rem;
+}
+
+.exit-btn{
+margin: 20px;
+
+}
