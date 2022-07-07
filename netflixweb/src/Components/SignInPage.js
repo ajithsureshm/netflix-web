@@ -13,7 +13,7 @@ function SignInPage() {
     <div>
         <div className="login_page">
       
-      <form className='form' >
+      <form className='signinform' >
 
       <img width="200px" height="200px" src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' ></img>
 
@@ -34,14 +34,14 @@ function SignInPage() {
         <input type="number" name="" id="email" placeholder='Phone' />
         </div>
 
-        <button className= 'btn btn_login' >SignIn</button>
+        <button className= 'btn btn_login' style={{ cursor: "pointer" }} >SignIn</button>
 
         <div className='exit' >
 
-        <button className='btn_login exit-btn' onClick={() => {
+        <button className='btn_login exit-btn'style={{ cursor: "pointer" }} onClick={() => {
             navigate('/')}} >Home</button>
 
-        <button className='btn_login exit-btn ' onClick={() => {
+        <button className='btn_login exit-btn ' style={{ cursor: "pointer" }} onClick={() => {
             navigate('/login')}} >Login</button>
 
         </div>

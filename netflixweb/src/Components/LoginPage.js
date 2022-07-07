@@ -23,14 +23,14 @@ function LoginPage() {
         <input type="text" name="" id="email" placeholder='Password' />
         </div>
 
-        <button className= 'btn btn_login' >Login</button>
+        <button className= 'btn btn_login' style={{ cursor: "pointer" }} >Login</button>
 
         <div className='exit' >
 
-        <button className='btn_login exit-btn' onClick={() => {
+        <button className='btn_login exit-btn' style={{ cursor: "pointer" }} onClick={() => {
             navigate('/')}} >Home</button>
 
-        <button className='btn_login exit-btn ' onClick={() => {
+        <button className='btn_login exit-btn ' style={{ cursor: "pointer" }} onClick={() => {
             navigate('/signIn')}} >Signup</button>
 
         </div>
