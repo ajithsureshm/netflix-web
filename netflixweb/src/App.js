@@ -11,28 +11,61 @@ import Documentry from './Pages/Documentry'
 
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from 'react';
+import React, {useEffect, useContext , Suspense, useState} from 'react';
+import {AuthContext, FirebaseContext} from './store/FirebaseContext'
 
 import Navbar from './Components/Navbar';
 import Banner from './Components/Banner'
 import Login from './Pages/Login'
 import SignIn from './Pages/SignIn'
+import RingLoader from "react-spinners/ClipLoader";
 
 
 
 function App() {
+
+
+  const {user,setUser} = useContext(AuthContext)
+
+  const {firebase} = useContext(FirebaseContext)
+
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+
+    // console.log(user);
+
+      firebase.auth().onAuthStateChanged((user) => {
+      setUser(user)
+
+
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false)
+      }, 3000);
+  });
+    
+  },[])
+  
   
   return (
 
+
     <Router>
 
+{ loading ? <RingLoader color={'#CF0A20'} loading={loading}  size={100} /> :  
+
+
     <div className="App" >
+      
 
       {/* <Navbar/>
 
       <Banner/> */}
 
+
      <Routes>
+
 
        <Route path='/' exact element={<Home />} />
 
@@ -54,14 +87,18 @@ function App() {
        
        <Route path='/signIn' element={<SignIn />} />
 
-
+       
 
       
       </Routes>
 
-    </div>
+    
+
+    </div>}
 
     </Router>
+    
+    
   );
 }
 

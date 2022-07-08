@@ -1,13 +1,20 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom';
+import {AuthContext,FirebaseContext} from '../store/FirebaseContext'
 
 
 function Navbar() {
   const [show, setShow] = useState(false)
 
+
     const navigate = useNavigate();
+
+
+    const { user } = useContext(AuthContext);
+
+  const { firebase } = useContext(FirebaseContext);
 
 
 
@@ -15,7 +22,9 @@ function Navbar() {
       window.addEventListener('scroll',() =>{
           if (window.scrollY >100 ) {
               setShow(true)
-          }else setShow(false)
+          }else {
+             setShow(false)
+          }
           
       })
 
@@ -58,6 +67,23 @@ function Navbar() {
             navigate('/documentry')}} >DECUMENTRY</a>
 
 
+         </div>
+
+         <div className='user'>
+         <span >
+           
+           {user ? (
+             `welcome ${user.displayName}`
+           ) : (
+             <span
+               style={{ cursor: "pointer" }}
+               onClick={() => {
+                 navigate("/login");
+               }}
+             > Login
+             </span>
+           )}
+         </span>
          </div>
 
         <img className='login'  onClick={() => {

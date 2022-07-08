@@ -39,10 +39,18 @@
    font-style: initial;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 550;
     
 } 
 a{
-    padding: 0 .5rem;
+    padding: 0 .4rem;
 }
 
+.user{
+    font-weight: 700;
+    font-style: oblique;
+    margin-right: 7rem;
+    color: white;
+
+
+}
